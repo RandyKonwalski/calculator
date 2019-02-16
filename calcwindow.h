@@ -15,6 +15,10 @@ public:
     explicit CalcWindow(QWidget *parent = 0);
     ~CalcWindow();
 
+private slots:
+    void NumPressed();
+    void FuncPressed();
+
 private:
     Ui::CalcWindow *ui;
 };
