@@ -45,6 +45,14 @@ void CalcWindow::NumPressed(){
     }
 }
 
+void CalcWindow::CEPressed(){
+    ui->lineEdit->clear();
+}
+
+void CalcWindow::CPressed(){
+    ui->lineEdit->clear();
+}
+
 void CalcWindow::FuncPressed(){
 
 }
