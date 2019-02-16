@@ -18,6 +18,8 @@ public:
 private slots:
     void NumPressed();
     void FuncPressed();
+    void CPressed();
+    void CEPressed();
 
 private:
     Ui::CalcWindow *ui;
