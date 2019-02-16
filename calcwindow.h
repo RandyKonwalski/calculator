@@ -20,6 +20,7 @@ private slots:
     void FuncPressed();
     void CPressed();
     void CEPressed();
+    void DotPressed();
 
 private:
     Ui::CalcWindow *ui;

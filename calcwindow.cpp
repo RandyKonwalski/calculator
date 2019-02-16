@@ -35,6 +35,8 @@ CalcWindow::CalcWindow(QWidget *parent) :
 
     connect(ui->Button_CE, SIGNAL(released()), this, SLOT(CEPressed()));
     connect(ui->Button_C, SIGNAL(released()), this, SLOT(CPressed()));
+
+    connect(ui->Button_DOT, SIGNAL(released()), this, SLOT(DotPressed()));
 }
 
 CalcWindow::~CalcWindow()
@@ -64,6 +66,15 @@ void CalcWindow::CEPressed(){
 
 void CalcWindow::CPressed(){
     ui->lineEdit->clear();
+}
+
+void CalcWindow::DotPressed(){
+    QPushButton *button = (QPushButton *)sender();
+    QString valueline = ui->lineEdit->text();
+    if(valueline.toDouble() != 0){
+        QString valueend = valueline + ".";
+        ui->lineEdit->setText(valueend);
+    }
 }
 
 void CalcWindow::FuncPressed(){
