@@ -1,6 +1,7 @@
 #include "calcwindow.h"
 #include "ui_calcwindow.h"
 
+
 CalcWindow::CalcWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::CalcWindow)
@@ -30,7 +31,15 @@ CalcWindow::~CalcWindow()
 }
 
 void CalcWindow::NumPressed(){
-
+    QPushButton *button = (QPushButton *)sender();
+    QString valuebtn = button->text();
+    QString valueline = ui->lineEdit->text();
+    if(valueline.toDouble() == 0){
+        ui->lineEdit->setText(valuebtn);
+    } else {
+        QString valueend = valueline + valuebtn;
+        ui->lineEdit->setText(valueend);
+    }
 }
 
 void CalcWindow::FuncPressed(){
