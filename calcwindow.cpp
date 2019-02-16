@@ -23,6 +23,9 @@ CalcWindow::CalcWindow(QWidget *parent) :
     connect(ui->Button_SUB, SIGNAL(released()), this, SLOT(FuncPressed()));
     connect(ui->Button_MUL, SIGNAL(released()), this, SLOT(FuncPressed()));
     connect(ui->Button_DIV, SIGNAL(released()), this, SLOT(FuncPressed()));
+
+    connect(ui->Button_CE, SIGNAL(released()), this, SLOT(CEPressed()));
+    connect(ui->Button_C, SIGNAL(released()), this, SLOT(CPressed()));
 }
 
 CalcWindow::~CalcWindow()
